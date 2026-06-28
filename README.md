@@ -88,11 +88,13 @@ graph TD
    - *Fix*: Run playground with `--no-reload_agents` flag as configured in `Makefile`.
 
 ## Assets
-- [Workflow Architecture Diagram](file:///c:/Users/DELL/Desktop/ADK%20Workspace/nutripulse-coach/assets/architecture_diagram.png)
-- [Project Cover Banner](file:///c:/Users/DELL/Desktop/ADK%20Workspace/nutripulse-coach/assets/cover_page_banner.png)
+
+![Project Cover Banner](assets/cover_page_banner.png)
+
+![Workflow Architecture Diagram](assets/architecture_diagram.png)
 
 ## Demo Script
-Refer to [DEMO_SCRIPT.txt](file:///c:/Users/DELL/Desktop/ADK%20Workspace/nutripulse-coach/DEMO_SCRIPT.txt) for a guided presentation walk-through.
+Refer to [DEMO_SCRIPT.txt](DEMO_SCRIPT.txt) for a guided presentation walk-through.
 
 ## Push to GitHub
 
