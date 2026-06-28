@@ -1,0 +1,39 @@
+[0:00 — HOOK]
+Maintaining a healthy lifestyle and adhering to precise nutrition goals can be overwhelming, especially when trying to balance biometric targets with daily dietary restrictions safely. NutriPulse Coach solves this by providing a personalized, highly intelligent, and automated AI health concierge that designs custom meal and wellness plans tailored specifically to your goals.
+
+[0:20 — WHAT IT IS]
+NutriPulse Coach is built under the Concierge Agents track using Google ADK 2.0. It coordinates specialized agents that calculate daily calories, macro ratios, hydration targets, and recipe recommendations while prioritizing user data security.
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+(pause)
+As you can see on our project banner, NutriPulse Coach is an all-in-one AI concierge delivering automated, secure, and deeply personalized wellness planning at your fingertips.
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+(pause)
+Let me walk you through how NutriPulse processes incoming user requests behind the scenes.
+First, every request enters our Security Checkpoint node to perform instant PII scrubbing and prompt injection checks.
+If passed, execution moves to Orchestrator Prep, which initializes shared state data before kicking off parallel branch execution.
+In parallel, our Meal Planner agent generates structured daily calorie and macro breakdowns, while our Wellness Coach agent formulates custom hydration and workout targets.
+Both specialized agents connect to our local MCP Server via stdio transport to query live nutrition algorithms and recipe databases.
+Their outputs join at Join Plans and flow into a Human Approval node, pausing execution so the user can review the proposed plan before our final summary node synthesizes the complete report.
+
+[2:00 — LIVE DEMO]
+(switch to playground at localhost:18081)
+(pause)
+Now let us look at the live demo in our ADK Playground.
+In our first test case, I enter: "I am 70kg, 1.75m tall, looking for a 2200 cal muscle gain meal plan with high protein recipes and hydration targets. My contact is john@example.com."
+Watch as the security checkpoint automatically redacts the email address. The meal planner and wellness coach run concurrently, querying MCP tools to calculate exact macros and BMI. The workflow pauses for human approval, and upon confirmation, outputs a structured plan.
+In our second test case, requesting an extreme 800 calorie deficit flags a medical warning advisory in the final summary.
+In our third test case, attempting a prompt injection like "ignore previous instructions" is blocked immediately at entry with a security violation alert.
+
+[3:00 — SECURITY & MCP]
+(pause)
+Our security model enforces regex PII scrubbing, injection detection routing, and structured JSON audit logging for complete observability.
+Meanwhile, our dedicated MCP server exposes 4 domain tools: calculate BMI, get macronutrient targets, search recipes, and log daily water intake.
+
+[3:30 — IMPACT / CLOSE]
+(pause)
+NutriPulse Coach empowers individuals to achieve their health goals with confidence, knowing their sensitive personal data is protected by enterprise-grade AI safety architecture.
+Thank you for watching!
