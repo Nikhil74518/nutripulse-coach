@@ -102,13 +102,17 @@ Refer to [DEMO_SCRIPT.txt](file:///c:/Users/DELL/Desktop/ADK%20Workspace/nutripu
    - Do NOT initialize with README (you already have one)
 
 2. In your terminal, navigate into your project folder:
+   ```bash
    cd nutripulse-coach
    git init
+   git config user.email "sainikhil.29112010@gmail.com"
+   git config user.name "Nikhil74518"
    git add .
    git commit -m "Initial commit: nutripulse-coach ADK agent"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/nutripulse-coach.git
-   git push -u origin main
+   git remote add origin https://github.com/Nikhil74518/nutripulse-coach.git
+   git push -u origin main --force
+   ```
 
 3. Verify .gitignore includes:
    ```text
