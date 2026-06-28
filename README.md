@@ -105,13 +105,13 @@ Refer to [DEMO_SCRIPT.txt](file:///c:/Users/DELL/Desktop/ADK%20Workspace/nutripu
    ```bash
    cd nutripulse-coach
    git init
-   git config user.email "sainikhil.29112010@gmail.com"
-   git config user.name "Nikhil74518"
+   git config user.email "<your-email>"
+   git config user.name "<your-username>"
    git add .
    git commit -m "Initial commit: nutripulse-coach ADK agent"
    git branch -M main
-   git remote add origin https://github.com/Nikhil74518/nutripulse-coach.git
-   git push -u origin main --force
+   git remote add origin https://github.com/<your-username>/nutripulse-coach.git
+   git push -u origin main
    ```
 
 3. Verify .gitignore includes:
